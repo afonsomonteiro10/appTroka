@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339818947980",
+    "project_id": "apptroka",
+    "storage_bucket": "apptroka.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339818947980:android:aff179cc23de60f6b622a9",
+        "android_client_info": {
+          "package_name": "pt.ipsantarem.apptroka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_b_mTCwz8x0Ohl9OzL_uSW5W484XTb-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
