@@ -1,185 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#F2F2F2">
 
-    <!-- Header com imagem, nome e estado online -->
-    <RelativeLayout
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#1E3A8A"
-        android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/ic_user"
-            android:background="@drawable/circle_background"
-            android:scaleType="centerCrop"/>
-
-        <View
-            android:id="@+id/onlineDot"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/green_circle"
-            android:layout_alignEnd="@id/imgProfile"
-            android:layout_alignTop="@id/imgProfile"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"/>
-
-        <TextView
-            android:id="@+id/tvUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jonas Gonçalves"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_toEndOf="@id/imgProfile"
-            android:layout_marginStart="16dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-
-    <!-- Seleção de dias -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="12dp"
-        android:layout_marginTop="8dp">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_calendar" />
-
-        <TextView android:text="01  02  03  04  05"
-            android:layout_marginStart="12dp"
-            android:textSize="16sp"/>
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="12dp"
-            android:src="@drawable/ic_arrow_down" />
-    </LinearLayout>
-
-    <!-- Cartão: Progresso de Aprendizado -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/card_border">
-
-        <TextView
-            android:text="Progresso de Aprendizado"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <TextView
-            android:text="Estou a aprender: Falar ucraniano"
-            android:layout_marginBottom="8dp"/>
-
-        <ProgressBar
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="12dp"
-            android:progress="25"
-            android:progressTint="#1E3A8A"
-            android:backgroundTint="#E0E0E0"
-            android:layout_marginBottom="8dp"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView android:text="Joana Maria "/>
-            <ImageView android:src="@drawable/ic_user_small"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="4dp"/>
-            <TextView android:text=" está a ensinar-me"
-                android:layout_marginStart="4dp"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Cartão: Progresso de Ensino -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/card_border">
-
-        <TextView
-            android:text="Progresso de Ensino"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
-
-        <TextView
-            android:text="Estou a ensinar: Falar português"
-            android:layout_marginBottom="8dp"/>
-
-        <ProgressBar
-            style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
-            android:layout_height="12dp"
-            android:progress="70"
-            android:progressTint="#1E3A8A"
-            android:backgroundTint="#E0E0E0"
-            android:layout_marginBottom="8dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:text="Estou a ensinar: Joana Maria"
-            android:layout_marginTop="4dp"/>
-    </LinearLayout>
+            <!-- Top Section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#1E3A8A"
+                android:padding="20dp">
 
-    <!-- Barra de navegação inferior -->
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Olá, Marta 👋"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="8dp"
+                    android:text="Começa o teu progresso agora."
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- Learning Progress Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progresso de Aprendizado"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="6 aulas restantes"
+                    android:textColor="#666666" />
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="60"
+                    android:progressTint="#1E3A8A"
+                    android:backgroundTint="#DDDDDD" />
+            </LinearLayout>
+
+            <!-- Teaching Progress Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progresso de Ensino"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2 turmas ativas"
+                    android:textColor="#666666" />
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="40"
+                    android:progressTint="#1E3A8A"
+                    android:backgroundTint="#DDDDDD" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Blue Navigation Bar -->
     <LinearLayout
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_gravity="bottom"
-        android:background="#1E3A8A"
-        android:gravity="center"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
+        android:background="#1E3A8A"
         android:paddingHorizontal="32dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp">
+        android:gravity="center">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:background="@android:color/transparent"
+        <!-- Placeholder Icon 1 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_view"
             android:tint="#FFFFFF"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_gravity="center" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_home"
-            android:background="@android:color/transparent"
+        <!-- Placeholder Icon 2 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_edit"
             android:tint="#FFFFFF"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_gravity="center" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_chat"
-            android:background="@android:color/transparent"
+        <!-- Placeholder Icon 3 -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_info_details"
             android:tint="#FFFFFF"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
