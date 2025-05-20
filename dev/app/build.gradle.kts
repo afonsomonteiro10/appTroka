@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android:flexbox:3.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,6 +45,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
-    implementation("com.google.firebase:firebase-analytics")
+//    implementation(libs.firebase.bom)
+//    implementation(libs.flexbox)
 }
