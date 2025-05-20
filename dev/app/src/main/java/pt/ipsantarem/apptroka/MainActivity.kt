@@ -58,7 +58,8 @@ class MainActivity : AppCompatActivity() {
             DatePickerDialog(
                 this,
                 { _, year, month, dayOfMonth ->
-                    Toast.makeText(this, "$dayOfMonth/${month + 1}/$year", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "$dayOfMonth/${month + 1}/$year", Toast.LENGTH_SHORT)
+                        .show()
                 },
                 today.get(Calendar.YEAR),
                 today.get(Calendar.MONTH),
