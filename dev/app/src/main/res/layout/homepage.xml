@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F2F2">
@@ -41,7 +42,7 @@
                     android:layout_alignEnd="@id/iconUser"
                     android:layout_alignTop="@id/iconUser"
                     android:layout_marginEnd="4dp"
-                    android:layout_marginTop="4dp"/>
+                    android:layout_marginTop="4dp" />
 
 
                 <!-- Texto de saudação -->
@@ -88,7 +89,7 @@
                     android:layout_height="24dp"
                     android:src="@drawable/ic_calendar"
                     android:contentDescription="Calendário"
-                    android:tint="@color/blue" />
+                    app:tint="@color/azul" />
 
                 <!-- Espaçamento entre ícone e dias -->
                 <Space
@@ -113,11 +114,11 @@
                 <ImageButton
                     android:id="@+id/open_calendar_btn"
                     android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/ic_expand"
                     android:contentDescription="Abrir calendário"
-                    android:tint="@color/blue" />
+                    android:src="@drawable/ic_expand"
+                    app:tint="@color/azul" />
             </LinearLayout>
 
 
