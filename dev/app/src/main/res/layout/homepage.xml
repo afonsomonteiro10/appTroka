@@ -70,6 +70,57 @@
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:id="@+id/calendar_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_calendar_pill"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:layout_margin="16dp"
+                android:gravity="center_vertical"
+                android:baselineAligned="false">
+
+                <!-- Ícone do calendário -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"
+                    android:contentDescription="Calendário"
+                    android:tint="@color/blue" />
+
+                <!-- Espaçamento entre ícone e dias -->
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- Dias da semana -->
+                <LinearLayout
+                    android:id="@+id/week_days_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal" />
+
+                <!-- Espaço antes do botão -->
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <!-- Botão de expandir calendário -->
+                <ImageButton
+                    android:id="@+id/open_calendar_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_expand"
+                    android:contentDescription="Abrir calendário"
+                    android:tint="@color/blue" />
+            </LinearLayout>
+
+
 
             <!-- Learning Progress Card -->
             <LinearLayout
@@ -164,7 +215,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_search"
-            android:tint="#ffffff"
+            android:tint="#FFFFFF"
             android:layout_weight="1"
             android:layout_gravity="center" />
 
