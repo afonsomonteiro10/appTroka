@@ -23,8 +23,8 @@
             </intent-filter>
         </activity>
 
-        <!-- InterestsActivity adicionada -->
-        <activity android:name=".I" />
+        <activity android:name=".ChatsActivity" />
+
 
     </application>
 
