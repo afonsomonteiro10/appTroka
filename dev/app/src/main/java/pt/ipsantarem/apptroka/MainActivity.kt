@@ -13,6 +13,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Calendar
+import android.content.Intent
+import android.widget.ImageView
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,5 +69,13 @@ class MainActivity : AppCompatActivity() {
                 today.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
+
+        val chatButton = findViewById<ImageView>(R.id.chatButton)
+        chatButton.setOnClickListener {
+            val intent = Intent(this, ChatsActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
