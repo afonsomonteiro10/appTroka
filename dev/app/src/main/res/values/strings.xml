@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">appTroka</string>
+    <string-array name="chat_filter_options">
+        <item>Mais recentes</item>
+        <item>Online primeiro</item>
+        <item>Nome (A-Z)</item>
+    </string-array>
 </resources>
