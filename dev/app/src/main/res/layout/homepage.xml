@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/iconUser"
                     android:layout_alignTop="@id/iconUser"
-                    android:text="Olá, Marta Gonçalves"
+                    android:text="Marta Gonçalves"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
