@@ -56,6 +56,7 @@
         android:entries="@array/chat_filter_options"
         android:background="@android:drawable/btn_dropdown" />
 
+
     <!-- Lista de chats -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
