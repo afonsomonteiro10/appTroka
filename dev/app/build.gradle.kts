@@ -5,11 +5,11 @@ plugins {
     id("kotlin-kapt")
     id ("kotlin-android")
     id ("com.android.application")
-   // apply("com.google.gms.google-services")
+    apply("com.google.gms.google-services")
 
 }
 
-/* android {
+android {
     namespace = "pt.ipsantarem.apptroka"
     compileSdk = 35
 
@@ -40,7 +40,7 @@ plugins {
         jvmTarget = "11"
     }
 }
-*/
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -55,9 +55,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    // implementation ("com.yuyakaido.android:card-stack-view:2.3.4")
-    // implementation("com.github.bumptech.glide:glide:4.15.1")
-    // kapt ("com.github.bumptech.glide:compiler:4.15.1")
+    implementation ("com.yuyakaido.android:card-stack-view:2.3.4")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt ("com.github.bumptech.glide:compiler:4.15.1")
 
 
 //    implementation(libs.firebase.bom)
