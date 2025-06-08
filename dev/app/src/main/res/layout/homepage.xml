@@ -212,7 +212,7 @@
         android:gravity="center">
 
         <!-- Placeholder Icon 1 -->
-        <ImageView
+        <ImageButton
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_search"
@@ -220,7 +220,7 @@
             android:layout_gravity="center" />
 
         <!-- Placeholder Icon 2 -->
-        <ImageView
+        <ImageButton
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -228,7 +228,7 @@
             android:src="@drawable/ic_home" />
 
         <!-- Placeholder Icon 3 -->
-        <ImageView
+        <ImageButton
             android:id="@+id/chatButton"
             android:layout_width="24dp"
             android:layout_height="24dp"

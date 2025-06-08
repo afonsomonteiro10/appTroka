@@ -6,6 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.io.Serializable
 
 class RegisterActivity {
 
@@ -60,10 +61,25 @@ class RegisterActivity {
             }
         }
 
+        private fun urlDaFoto(value: Any): Comparable<*>? & Serializable? {
+            return TODO("Provide the return value")
+        }
+
         private fun guardarUtilizadorFirestore(userId: String, email: String) {
+            // Exemplo de dados a guardar num documento "utilizadores/{uid}"
+            val nomeDoUtilizador = null
+            val habilidadeQueOferece = null
+            val habilidadeQueProcura = null
             val dados = hashMapOf(
+                "uid" to userId,
                 "email" to email,
-                "criado_em" to System.currentTimeMillis()
+                "name" to nomeDoUtilizador,
+                "photoUrl" to urlDaFoto(),
+                "skillOffer" to habilidadeQueOferece,
+                "skillWant" to habilidadeQueProcura,
+                "createdAt" to System.currentTimeMillis()
+            )
+
             )
 
             db.collection("utilizadores").document(userId)
@@ -75,6 +91,20 @@ class RegisterActivity {
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Erro ao guardar dados", Toast.LENGTH_SHORT).show()
+                }
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val userId = auth.currentUser?.uid
+                        if (userId != null) {
+                            // Em vez de guardar email e ir ao Main, vamos diretamente completar perfil
+                            startActivity(Intent(this, CompleteProfileActivity::class.java))
+                            finish()
+                        }
+                    } else {
+                        // ...
+                    }
                 }
         }
     }

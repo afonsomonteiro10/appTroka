@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2">
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/card_stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardStack_stackFrom="none"
+        app:cardStack_visibleCount="3"
+        app:cardStack_translationInterval="8.0dp"
+        app:cardStack_swipeThreshold="0.3"
+        app:cardStack_maxDegree="20.0"
+        app:cardStack_directions="LEFT,RIGHT"
+        app:cardStack_canScrollHorizontal="true"
+        app:cardStack_canScrollVertical="false"
+        app:cardStack_stackScale="0.95"
+        tools:ignore="MissingClass" />
+
+</FrameLayout>

@@ -75,6 +75,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ChatsActivity::class.java)
             startActivity(intent)
         }
+        val exploreButton = findViewById<ImageView>(R.id.ic_search)
+        exploreButton.setOnClickListener {
+            startActivity(Intent(this, SwipeProfilesActivity::class.java))
+        }
 
 
     }

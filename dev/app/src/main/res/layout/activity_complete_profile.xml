@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completa o Perfil"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nome -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nome"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Foto de perfil (imagem clicável que abre galeria) -->
+        <ImageView
+            android:id="@+id/imageProfileUpload"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_placeholder_profile"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap para carregar foto"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Dropdown ou Spinner de habilidade que oferece -->
+        <Spinner
+            android:id="@+id/spinnerSkillOffer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Dropdown ou Spinner de habilidade que quer aprender -->
+        <Spinner
+            android:id="@+id/spinnerSkillWant"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botão para concluir perfil -->
+        <Button
+            android:id="@+id/buttonCompleteProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Concluir Perfil"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3E578A"
+            android:background="@drawable/rounded_button" />
+
+    </LinearLayout>
+</ScrollView>
